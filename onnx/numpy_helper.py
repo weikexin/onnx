@@ -34,8 +34,8 @@ def to_array(tensor):  # type: (TensorProto) -> np.ndarray[Any]
             "Currently not supporting loading segments.")
     if tensor.data_type == TensorProto.UNDEFINED:
         raise ValueError("The data type is not defined.")
-    if tensor.data_type == TensorProto.STRING:
-        raise ValueError("Tensor data type STRING is not supported.")
+#    if tensor.data_type == TensorProto.STRING:
+#        raise ValueError("Tensor data type STRING is not supported.")
 
     tensor_dtype = tensor.data_type
     np_dtype = mapping.TENSOR_TYPE_TO_NP_TYPE[tensor_dtype]
